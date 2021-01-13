@@ -5,7 +5,7 @@ To install:
 ```sh
 $ git clone https://github.com/Kozova1/parsec-flatpak.git
 $ cd parsec-flatpak
-$ flatpak-builder --user --install app.parsec.Parsec.yml
+$ flatpak-builder --user --install build-dir app.parsec.Parsec.yml
 ```
 
 To run:
