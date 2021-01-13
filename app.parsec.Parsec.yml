@@ -27,3 +27,4 @@ finish-args:
   - --share=network
   - --socket=pulseaudio
   - --filesystem=home
+  - --device=dri
