@@ -16,8 +16,6 @@ modules:
       - type: file
         url: 'https://builds.parsecgaming.com/package/parsec-linux.deb'
         sha256: 0c7207f419377fc35e30448acd00d8701300ac5a44936ac6d87a468c9afccdc1
-          # - type: file
-          #   path: './app.parsec.Parsec.png'
       - type: file
         path: './app.parsec.Parsec.desktop'
 finish-args:
@@ -26,5 +24,5 @@ finish-args:
   - --socket=wayland
   - --share=network
   - --socket=pulseaudio
-  - --filesystem=home
+  - --filesystem=~/.parsec # XDG standards? who needs them anyway?
   - --device=dri
