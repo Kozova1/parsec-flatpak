@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Parsec
+GenericName=Parsec
+Comment=Simple, low-latency game streaming.
+Exec=/app/bin/parsecd %u
+Icon=app.parsec.Parsec
+Terminal=false
+Type=Application
+Categories=Game;

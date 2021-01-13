@@ -1,0 +1,29 @@
+app-id: app.parsec.Parsec
+runtime: org.freedesktop.Platform
+runtime-version: '19.08'
+sdk: org.freedesktop.Sdk
+command: parsecd
+modules:
+  - name: parsecd
+    buildsystem: simple
+    build-commands:
+      - ar x parsec-linux.deb
+      - tar xf data.tar.xz
+      - install -D usr/bin/parsecd /app/bin/parsecd
+      - install -D usr/share/icons/hicolor/256x256/apps/parsecd.png /app/share/icons/hicolor/256x256/apps/app.parsec.Parsec.png
+      - install -D app.parsec.Parsec.desktop /app/share/applications/app.parsec.Parsec.desktop
+    sources:
+      - type: file
+        url: 'https://builds.parsecgaming.com/package/parsec-linux.deb'
+        sha256: 0c7207f419377fc35e30448acd00d8701300ac5a44936ac6d87a468c9afccdc1
+          # - type: file
+          #   path: './app.parsec.Parsec.png'
+      - type: file
+        path: './app.parsec.Parsec.desktop'
+finish-args:
+  - --share=ipc
+  - --socket=x11
+  - --socket=wayland
+  - --share=network
+  - --socket=pulseaudio
+  - --filesystem=home
