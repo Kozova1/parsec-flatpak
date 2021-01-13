@@ -1,9 +1,10 @@
 # parsec-flatpak
 This is a flatpak-builder manifest for parsec.
 
-First, make sure you have the freedesktop SDK:
+First, make sure you have the freedesktop SDK and runtime:
 
 ```sh
+$ flatpak install org.freedesktop.Platform/x86_64/19.08
 $ flatpak install org.freedesktop.Sdk/x86_64/19.08
 ```
 
